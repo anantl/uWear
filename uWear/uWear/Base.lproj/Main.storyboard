@@ -42,15 +42,23 @@
                                 <state key="normal" title="Button">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="rfrsh:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="v2u-tU-OOS"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Today's Picks" id="MVO-xX-7eJ"/>
+                    <connections>
+                        <outlet property="pntsView" destination="TUF-UY-5Ud" id="4v4-uW-Yrq"/>
+                        <outlet property="refresh" destination="bSP-DB-r89" id="mkS-pl-5lN"/>
+                        <outlet property="shirtView" destination="4Oh-kW-wcP" id="01p-Ez-hbo"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="734" y="319"/>
+            <point key="canvasLocation" x="626" y="319"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="KVf-EG-A5s">

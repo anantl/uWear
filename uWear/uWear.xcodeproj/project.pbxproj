@@ -14,6 +14,10 @@
 		180A91781B5FB3EA00E60B3A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 180A91771B5FB3EA00E60B3A /* Images.xcassets */; };
 		180A917B1B5FB3EA00E60B3A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 180A91791B5FB3EA00E60B3A /* LaunchScreen.xib */; };
 		180A91871B5FB3EA00E60B3A /* uWearTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 180A91861B5FB3EA00E60B3A /* uWearTests.m */; };
+		180A91941B5FBAB400E60B3A /* pt0.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 180A91901B5FBAB400E60B3A /* pt0.jpg */; };
+		180A91951B5FBAB400E60B3A /* pt1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 180A91911B5FBAB400E60B3A /* pt1.jpg */; };
+		180A91961B5FBAB400E60B3A /* sh0.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 180A91921B5FBAB400E60B3A /* sh0.jpg */; };
+		180A91971B5FBAB400E60B3A /* sh1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 180A91931B5FBAB400E60B3A /* sh1.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +44,10 @@
 		180A91801B5FB3EA00E60B3A /* uWearTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = uWearTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		180A91851B5FB3EA00E60B3A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		180A91861B5FB3EA00E60B3A /* uWearTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = uWearTests.m; sourceTree = "<group>"; };
+		180A91901B5FBAB400E60B3A /* pt0.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = pt0.jpg; path = ../pt0.jpg; sourceTree = "<group>"; };
+		180A91911B5FBAB400E60B3A /* pt1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = pt1.jpg; path = ../pt1.jpg; sourceTree = "<group>"; };
+		180A91921B5FBAB400E60B3A /* sh0.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = sh0.jpg; path = ../sh0.jpg; sourceTree = "<group>"; };
+		180A91931B5FBAB400E60B3A /* sh1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = sh1.jpg; path = ../sh1.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +89,10 @@
 		180A91691B5FB3E900E60B3A /* uWear */ = {
 			isa = PBXGroup;
 			children = (
+				180A91901B5FBAB400E60B3A /* pt0.jpg */,
+				180A91911B5FBAB400E60B3A /* pt1.jpg */,
+				180A91921B5FBAB400E60B3A /* sh0.jpg */,
+				180A91931B5FBAB400E60B3A /* sh1.jpg */,
 				180A916E1B5FB3E900E60B3A /* AppDelegate.h */,
 				180A916F1B5FB3E900E60B3A /* AppDelegate.m */,
 				180A91711B5FB3E900E60B3A /* ViewController.h */,
@@ -199,9 +211,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				180A91971B5FBAB400E60B3A /* sh1.jpg in Resources */,
+				180A91961B5FBAB400E60B3A /* sh0.jpg in Resources */,
 				180A91761B5FB3E900E60B3A /* Main.storyboard in Resources */,
+				180A91951B5FBAB400E60B3A /* pt1.jpg in Resources */,
 				180A917B1B5FB3EA00E60B3A /* LaunchScreen.xib in Resources */,
 				180A91781B5FB3EA00E60B3A /* Images.xcassets in Resources */,
+				180A91941B5FBAB400E60B3A /* pt0.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

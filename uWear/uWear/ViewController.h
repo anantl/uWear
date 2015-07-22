@@ -9,6 +9,10 @@
 #import <UIKit/UIKit.h>
 
 @interface ViewController : UIViewController
+@property (weak, nonatomic) IBOutlet UIImageView *shirtView;
+@property (weak, nonatomic) IBOutlet UIImageView *pntsView;
+@property (weak, nonatomic) IBOutlet UIButton *refresh;
+- (IBAction)rfrsh:(id)sender;
 
 
 @end

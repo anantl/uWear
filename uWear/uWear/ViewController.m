@@ -32,9 +32,24 @@
 }
 
 - (IBAction)rfrsh:(id)sender {
-    self.shirtView.image = [UIImage imageNamed:[NSString stringWithFormat:@"cssh%d.jpg", ((arc4random() % 2))]];
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
     
-    self.pntsView.image = [UIImage imageNamed:[NSString stringWithFormat:@"cspt%d.jpg", ((arc4random() % 2))]];
+    NSEntityDescription *entity = [NSEntityDescription entityForName:@"Clothes" inManagedObjectContext:self.managedObjectContext];
+    [fetchRequest setEntity:entity];
+    
+    NSError *error = nil;
+    NSArray *result = [self.managedObjectContext executeFetchRequest:fetchRequest error:&error];
+    
+    if (error) {
+        NSLog(@"Unable to execute fetch request.");
+        NSLog(@"%@, %@", error, error.localizedDescription);
+        
+    } else {
+        UIImage *newImage;
+        NSManagedObject *newObj = (NSManagedObject *)[result objectAtIndex:([result count]-1)];
+        newImage = [UIImage imageWithData:[newObj valueForKey:@"pic"]];
+        self.shirtView.image=newImage;
+    }
 }
 
 - (IBAction)imagePicker:(id)sender {

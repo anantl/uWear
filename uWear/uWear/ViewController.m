@@ -25,6 +25,9 @@
     for(UIButton *button in self.buttonCollection){
         [button setHidden:YES];
     }
+    self.parMainBtn.alpha = .6;
+    self.offMainBtn.alpha = .6;
+    self.casMainBtn.alpha = 1;
     self.srchType=@"casual";
     [self fetchRandom:self];
 }
@@ -56,19 +59,21 @@
     [self.imgPkd setHidden:NO];
     [self.svBtn setHidden:NO];
     [self.cancelBtn setHidden:NO];
+    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
+    self.officeSlct.alpha = .4;
+    self.casualSlct.alpha = 1;
+    self.partySlct.alpha = .4;
+    self.saveCat = @"casual";
+    self.topSlct.alpha = 1;
+    self.bottomSlct.alpha = .4;
+    self.saveType = @"top";
     self.navigationItem.leftBarButtonItem.enabled = NO;
     self.navigationItem.rightBarButtonItem.enabled = NO;
     self.imgPkd.image = imgSlct;
     for(UIButton *button in self.buttonCollection){
         [button setHidden:NO];
     }
-    self.officeSlct.alpha = .25;
-    self.casualSlct.alpha = 1;
-    self.partySlct.alpha = .25;
-    self.saveCat = @"casual";
-    self.topSlct.alpha = 1;
-    self.bottomSlct.alpha = .25;
-    self.saveType = @"top";
+    
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
@@ -113,7 +118,6 @@
         if ([result count] == 0) {
             [self.topEmpty setHidden:NO];
             NSLog(@"Nothing to display on top");
-            return;
         }
         else {
             [self.topEmpty setHidden:YES];
@@ -140,10 +144,9 @@
         if ([result count] == 0) {
             [self.bottomEmpty setHidden:NO];
             NSLog(@"Nothing to display on bottom");
-            return;
         }
         else {
-            [self.bottomEmpty setHidden:NO];
+            [self.bottomEmpty setHidden:YES];
             UIImage *newImage;
             int randomImgNum = arc4random() % [result count];
             NSManagedObject *newObj = (NSManagedObject *)[result objectAtIndex:randomImgNum];
@@ -168,35 +171,59 @@
 
 - (IBAction)offClck:(id)sender {
     self.officeSlct.alpha = 1;
-    self.casualSlct.alpha = .25;
-    self.partySlct.alpha = .25;
+    self.casualSlct.alpha = .4;
+    self.partySlct.alpha = .4;
     self.saveCat = @"office";
 }
 
 - (IBAction)casClck:(id)sender {
-    self.officeSlct.alpha = .25;
+    self.officeSlct.alpha = .4;
     self.casualSlct.alpha = 1;
-    self.partySlct.alpha = .25;
+    self.partySlct.alpha = .4;
     self.saveCat = @"casual";
 }
 
 - (IBAction)parClck:(id)sender {
-    self.officeSlct.alpha = .25;
-    self.casualSlct.alpha = .25;
+    self.officeSlct.alpha = .4;
+    self.casualSlct.alpha = .4;
     self.partySlct.alpha = 1;
     self.saveCat = @"party";
 }
 
 - (IBAction)topClck:(id)sender {
     self.topSlct.alpha = 1;
-    self.bottomSlct.alpha = .25;
+    self.bottomSlct.alpha = .4;
     self.saveType = @"top";
 }
 
 - (IBAction)botClck:(id)sender {
     self.bottomSlct.alpha = 1;
-    self.topSlct.alpha = .25;
+    self.topSlct.alpha = .4;
     self.saveType = @"bottom";
+}
+
+- (IBAction)offSrch:(id)sender {
+    self.parMainBtn.alpha = .6;
+    self.casMainBtn.alpha = .6;
+    self.offMainBtn.alpha = 1;
+    self.srchType = @"office";
+    [self fetchRandom:self];
+}
+
+- (IBAction)parSrch:(id)sender {
+    self.offMainBtn.alpha = .6;
+    self.casMainBtn.alpha = .6;
+    self.parMainBtn.alpha = 1;
+    self.srchType = @"party";
+    [self fetchRandom:self];
+}
+
+- (IBAction)casSrch:(id)sender {
+    self.parMainBtn.alpha = .6;
+    self.offMainBtn.alpha = .6;
+    self.casMainBtn.alpha = 1;
+    self.srchType = @"casual";
+    [self fetchRandom:self];
 }
 
 

@@ -25,7 +25,8 @@
     // Override point for customization after application launch.
     ViewController *newViewController = [[navigationController viewControllers] objectAtIndex:0];
     newViewController.managedObjectContext = self.managedObjectContext;
-    
+    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
+
     return YES;
 }
 

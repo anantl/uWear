@@ -30,11 +30,17 @@
 @property (weak, nonatomic) IBOutlet UIButton *officeSlct;
 @property (weak, nonatomic) IBOutlet UILabel *topEmpty;
 @property (weak, nonatomic) IBOutlet UILabel *bottomEmpty;
+@property (weak, nonatomic) IBOutlet UIButton *offMainBtn;
+@property (weak, nonatomic) IBOutlet UIButton *parMainBtn;
+@property (weak, nonatomic) IBOutlet UIButton *casMainBtn;
 - (IBAction)offClck:(id)sender;
 - (IBAction)casClck:(id)sender;
 - (IBAction)parClck:(id)sender;
 - (IBAction)topClck:(id)sender;
 - (IBAction)botClck:(id)sender;
+- (IBAction)offSrch:(id)sender;
+- (IBAction)parSrch:(id)sender;
+- (IBAction)casSrch:(id)sender;
 
 - (IBAction)rfrsh:(id)sender;
 - (IBAction)imagePicker:(id)sender;

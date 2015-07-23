@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "AppDelegate.h"
 
 @interface ViewController ()
 
@@ -58,6 +59,28 @@
     self.navigationItem.rightBarButtonItem.enabled = NO;
     self.imgPkd.image = imgSlct;
     [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+- (IBAction)savePicker:(id)sender {
+    UIImage *newImg = self.imgPkd.image;
+    NSData * imageData = UIImageJPEGRepresentation(newImg, 0.0);
+    NSEntityDescription *entityDescription = [NSEntityDescription entityForName:@"Clothes" inManagedObjectContext: self.managedObjectContext];
+    NSManagedObject *newCloth = [[NSManagedObject alloc] initWithEntity:entityDescription insertIntoManagedObjectContext:self.managedObjectContext];
+    [newCloth setValue:imageData forKey:@"pic"];
+    [newCloth setValue:@"casual" forKey:@"cat"];
+    [newCloth setValue:@"top" forKey:@"type"];
+    NSError *error = nil;
+    
+    if (![newCloth.managedObjectContext save:&error]) {
+        NSLog(@"Unable to save managed object context.");
+        NSLog(@"%@, %@", error, error.localizedDescription);
+    }
+    [self.svBtn setHidden:YES];
+    [self.cancelBtn setHidden:YES];
+    [self.imgPkd setHidden:YES];
+    self.navigationItem.leftBarButtonItem.enabled = YES;
+    self.navigationItem.rightBarButtonItem.enabled = YES;
+    
 }
 
 - (IBAction)cancelPicker:(id)sender {

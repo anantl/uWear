@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "ViewController.h"
 
 @interface AppDelegate ()
 
@@ -20,7 +21,11 @@
 @synthesize persistentStoreCoordinator = _persistentStoreCoordinator;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    UINavigationController *navigationController = (UINavigationController *)self.window.rootViewController;
     // Override point for customization after application launch.
+    ViewController *newViewController = [[navigationController viewControllers] objectAtIndex:0];
+    newViewController.managedObjectContext = self.managedObjectContext;
+    
     return YES;
 }
 

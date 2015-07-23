@@ -20,10 +20,13 @@
     [self.svBtn setHidden:YES];
     [self.cancelBtn setHidden:YES];
     [self.imgPkd setHidden:YES];
-    
-    self.shirtView.image = [UIImage imageNamed:[NSString stringWithFormat:@"cssh%d.jpg", ((arc4random() % 2))]];
-    
-    self.pntsView.image = [UIImage imageNamed:[NSString stringWithFormat:@"cspt%d.jpg", ((arc4random() % 2))]];
+    [self.topEmpty setHidden:YES];
+    [self.bottomEmpty setHidden:YES];
+    for(UIButton *button in self.buttonCollection){
+        [button setHidden:YES];
+    }
+    self.srchType=@"casual";
+    [self fetchRandom:self];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -32,24 +35,7 @@
 }
 
 - (IBAction)rfrsh:(id)sender {
-    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
-    
-    NSEntityDescription *entity = [NSEntityDescription entityForName:@"Clothes" inManagedObjectContext:self.managedObjectContext];
-    [fetchRequest setEntity:entity];
-    
-    NSError *error = nil;
-    NSArray *result = [self.managedObjectContext executeFetchRequest:fetchRequest error:&error];
-    
-    if (error) {
-        NSLog(@"Unable to execute fetch request.");
-        NSLog(@"%@, %@", error, error.localizedDescription);
-        
-    } else {
-        UIImage *newImage;
-        NSManagedObject *newObj = (NSManagedObject *)[result objectAtIndex:([result count]-1)];
-        newImage = [UIImage imageWithData:[newObj valueForKey:@"pic"]];
-        self.shirtView.image=newImage;
-    }
+    [self fetchRandom:self];
 }
 
 - (IBAction)imagePicker:(id)sender {
@@ -73,6 +59,16 @@
     self.navigationItem.leftBarButtonItem.enabled = NO;
     self.navigationItem.rightBarButtonItem.enabled = NO;
     self.imgPkd.image = imgSlct;
+    for(UIButton *button in self.buttonCollection){
+        [button setHidden:NO];
+    }
+    self.officeSlct.alpha = .25;
+    self.casualSlct.alpha = 1;
+    self.partySlct.alpha = .25;
+    self.saveCat = @"casual";
+    self.topSlct.alpha = 1;
+    self.bottomSlct.alpha = .25;
+    self.saveType = @"top";
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
@@ -82,8 +78,8 @@
     NSEntityDescription *entityDescription = [NSEntityDescription entityForName:@"Clothes" inManagedObjectContext: self.managedObjectContext];
     NSManagedObject *newCloth = [[NSManagedObject alloc] initWithEntity:entityDescription insertIntoManagedObjectContext:self.managedObjectContext];
     [newCloth setValue:imageData forKey:@"pic"];
-    [newCloth setValue:@"casual" forKey:@"cat"];
-    [newCloth setValue:@"top" forKey:@"type"];
+    [newCloth setValue:self.saveCat forKey:@"cat"];
+    [newCloth setValue:self.saveType forKey:@"type"];
     NSError *error = nil;
     
     if (![newCloth.managedObjectContext save:&error]) {
@@ -93,15 +89,115 @@
     [self.svBtn setHidden:YES];
     [self.cancelBtn setHidden:YES];
     [self.imgPkd setHidden:YES];
+    for(UIButton *button in self.buttonCollection){
+        [button setHidden:YES];
+    }
     self.navigationItem.leftBarButtonItem.enabled = YES;
     self.navigationItem.rightBarButtonItem.enabled = YES;
     
+}
+
+- (void)fetchRandom:(id)sender {
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] initWithEntityName:@"Clothes"];
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"%K == %@ AND %K == %@", @"cat", self.srchType, @"type", @"top"];
+    [fetchRequest setPredicate:predicate];
+    
+    NSError *error = nil;
+    NSArray *result = [self.managedObjectContext executeFetchRequest:fetchRequest error:&error];
+    
+    if (error) {
+        NSLog(@"Unable to execute fetch request.");
+        NSLog(@"%@, %@", error, error.localizedDescription);
+        
+    } else {
+        if ([result count] == 0) {
+            [self.topEmpty setHidden:NO];
+            NSLog(@"Nothing to display on top");
+            return;
+        }
+        else {
+            [self.topEmpty setHidden:YES];
+            UIImage *newImage;
+            int randomImgNum = arc4random() % [result count];
+            NSManagedObject *newObj = (NSManagedObject *)[result objectAtIndex:randomImgNum];
+            newImage = [UIImage imageWithData:[newObj valueForKey:@"pic"]];
+            self.shirtView.image=newImage;
+        }
+    }
+    
+    fetchRequest = [[NSFetchRequest alloc] initWithEntityName:@"Clothes"];
+    predicate = [NSPredicate predicateWithFormat:@"%K == %@ AND %K == %@", @"cat", self.srchType, @"type", @"bottom"];
+    [fetchRequest setPredicate:predicate];
+    
+    error = nil;
+    result = [self.managedObjectContext executeFetchRequest:fetchRequest error:&error];
+    
+    if (error) {
+        NSLog(@"Unable to execute fetch request.");
+        NSLog(@"%@, %@", error, error.localizedDescription);
+        
+    } else {
+        if ([result count] == 0) {
+            [self.bottomEmpty setHidden:NO];
+            NSLog(@"Nothing to display on bottom");
+            return;
+        }
+        else {
+            [self.bottomEmpty setHidden:NO];
+            UIImage *newImage;
+            int randomImgNum = arc4random() % [result count];
+            NSManagedObject *newObj = (NSManagedObject *)[result objectAtIndex:randomImgNum];
+            newImage = [UIImage imageWithData:[newObj valueForKey:@"pic"]];
+            self.pntsView.image=newImage;
+            }
+
+    }
 }
 
 - (IBAction)cancelPicker:(id)sender {
     [self.svBtn setHidden:YES];
     [self.cancelBtn setHidden:YES];
     [self.imgPkd setHidden:YES];
-
+    for(UIButton *button in self.buttonCollection){
+        [button setHidden:YES];
+    }
+    self.navigationItem.leftBarButtonItem.enabled = YES;
+    self.navigationItem.rightBarButtonItem.enabled = YES;
 }
+
+
+- (IBAction)offClck:(id)sender {
+    self.officeSlct.alpha = 1;
+    self.casualSlct.alpha = .25;
+    self.partySlct.alpha = .25;
+    self.saveCat = @"office";
+}
+
+- (IBAction)casClck:(id)sender {
+    self.officeSlct.alpha = .25;
+    self.casualSlct.alpha = 1;
+    self.partySlct.alpha = .25;
+    self.saveCat = @"casual";
+}
+
+- (IBAction)parClck:(id)sender {
+    self.officeSlct.alpha = .25;
+    self.casualSlct.alpha = .25;
+    self.partySlct.alpha = 1;
+    self.saveCat = @"party";
+}
+
+- (IBAction)topClck:(id)sender {
+    self.topSlct.alpha = 1;
+    self.bottomSlct.alpha = .25;
+    self.saveType = @"top";
+}
+
+- (IBAction)botClck:(id)sender {
+    self.bottomSlct.alpha = 1;
+    self.topSlct.alpha = .25;
+    self.saveType = @"bottom";
+}
+
+
 @end

@@ -14,10 +14,6 @@
 		180A91781B5FB3EA00E60B3A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 180A91771B5FB3EA00E60B3A /* Images.xcassets */; };
 		180A917B1B5FB3EA00E60B3A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 180A91791B5FB3EA00E60B3A /* LaunchScreen.xib */; };
 		180A91871B5FB3EA00E60B3A /* uWearTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 180A91861B5FB3EA00E60B3A /* uWearTests.m */; };
-		180A91941B5FBAB400E60B3A /* cspt0.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 180A91901B5FBAB400E60B3A /* cspt0.jpg */; };
-		180A91951B5FBAB400E60B3A /* cspt1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 180A91911B5FBAB400E60B3A /* cspt1.jpg */; };
-		180A91961B5FBAB400E60B3A /* cssh0.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 180A91921B5FBAB400E60B3A /* cssh0.jpg */; };
-		180A91971B5FBAB400E60B3A /* cssh1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 180A91931B5FBAB400E60B3A /* cssh1.jpg */; };
 		1866BF291B60AC000038F57A /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1866BF281B60AC000038F57A /* CoreData.framework */; };
 		1866BF2A1B60AC140038F57A /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1866BF281B60AC000038F57A /* CoreData.framework */; };
 		1866BF2B1B60AC140038F57A /* CoreData.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1866BF281B60AC000038F57A /* CoreData.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -62,10 +58,6 @@
 		180A91801B5FB3EA00E60B3A /* uWearTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = uWearTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		180A91851B5FB3EA00E60B3A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		180A91861B5FB3EA00E60B3A /* uWearTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = uWearTests.m; sourceTree = "<group>"; };
-		180A91901B5FBAB400E60B3A /* cspt0.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = cspt0.jpg; path = ../cspt0.jpg; sourceTree = "<group>"; };
-		180A91911B5FBAB400E60B3A /* cspt1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = cspt1.jpg; path = ../cspt1.jpg; sourceTree = "<group>"; };
-		180A91921B5FBAB400E60B3A /* cssh0.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = cssh0.jpg; path = ../cssh0.jpg; sourceTree = "<group>"; };
-		180A91931B5FBAB400E60B3A /* cssh1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = cssh1.jpg; path = ../cssh1.jpg; sourceTree = "<group>"; };
 		1866BF281B60AC000038F57A /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		1866BF2D1B60ADE60038F57A /* uWear-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "uWear-Prefix.pch"; sourceTree = "<group>"; };
 		1866BF2F1B60AF240038F57A /* uWear-Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "uWear-Model.xcdatamodel"; sourceTree = "<group>"; };
@@ -113,10 +105,6 @@
 		180A91691B5FB3E900E60B3A /* uWear */ = {
 			isa = PBXGroup;
 			children = (
-				180A91901B5FBAB400E60B3A /* cspt0.jpg */,
-				180A91911B5FBAB400E60B3A /* cspt1.jpg */,
-				180A91921B5FBAB400E60B3A /* cssh0.jpg */,
-				180A91931B5FBAB400E60B3A /* cssh1.jpg */,
 				180A916E1B5FB3E900E60B3A /* AppDelegate.h */,
 				180A916F1B5FB3E900E60B3A /* AppDelegate.m */,
 				180A91711B5FB3E900E60B3A /* ViewController.h */,
@@ -238,13 +226,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				180A91971B5FBAB400E60B3A /* cssh1.jpg in Resources */,
-				180A91961B5FBAB400E60B3A /* cssh0.jpg in Resources */,
 				180A91761B5FB3E900E60B3A /* Main.storyboard in Resources */,
-				180A91951B5FBAB400E60B3A /* cspt1.jpg in Resources */,
 				180A917B1B5FB3EA00E60B3A /* LaunchScreen.xib in Resources */,
 				180A91781B5FB3EA00E60B3A /* Images.xcassets in Resources */,
-				180A91941B5FBAB400E60B3A /* cspt0.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

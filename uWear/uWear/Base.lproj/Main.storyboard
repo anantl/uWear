@@ -59,7 +59,11 @@
                     </view>
                     <navigationItem key="navigationItem" title="Today's Picks" id="MVO-xX-7eJ">
                         <barButtonItem key="leftBarButtonItem" style="plain" systemItem="compose" id="tjs-bn-KHd"/>
-                        <barButtonItem key="rightBarButtonItem" systemItem="camera" id="LXi-GH-LqA"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="camera" id="LXi-GH-LqA">
+                            <connections>
+                                <action selector="imagePicker:" destination="vXZ-lx-hvc" id="Q9K-sd-jpS"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="pntsView" destination="TUF-UY-5Ud" id="4v4-uW-Yrq"/>

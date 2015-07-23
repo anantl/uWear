@@ -35,4 +35,17 @@
     
     self.pntsView.image = [UIImage imageNamed:[NSString stringWithFormat:@"cspt%d.jpg", ((arc4random() % 2))]];
 }
+
+- (IBAction)imagePicker:(id)sender {
+    UIImagePickerController *imgpkr = [[UIImagePickerController alloc] init];
+    imgpkr.modalPresentationStyle = UIModalPresentationCurrentContext;
+    imgpkr.delegate = self;
+    [self presentViewController:imgpkr animated:NO completion:nil];
+}
+
+- (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker
+{
+    [self dismissViewControllerAnimated:NO completion:nil];
+}
+
 @end

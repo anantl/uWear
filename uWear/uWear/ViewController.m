@@ -17,9 +17,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.shirtView.image = [UIImage imageNamed:[NSString stringWithFormat:@"sh%d.jpg", ((arc4random() % 2))]];
+    self.shirtView.image = [UIImage imageNamed:[NSString stringWithFormat:@"cssh%d.jpg", ((arc4random() % 2))]];
     
-    self.pntsView.image = [UIImage imageNamed:[NSString stringWithFormat:@"pt%d.jpg", ((arc4random() % 2))]];
+    self.pntsView.image = [UIImage imageNamed:[NSString stringWithFormat:@"cspt%d.jpg", ((arc4random() % 2))]];
     
     
     
@@ -31,8 +31,8 @@
 }
 
 - (IBAction)rfrsh:(id)sender {
-    self.shirtView.image = [UIImage imageNamed:[NSString stringWithFormat:@"sh%d.jpg", ((arc4random() % 2))]];
+    self.shirtView.image = [UIImage imageNamed:[NSString stringWithFormat:@"cssh%d.jpg", ((arc4random() % 2))]];
     
-    self.pntsView.image = [UIImage imageNamed:[NSString stringWithFormat:@"pt%d.jpg", ((arc4random() % 2))]];
+    self.pntsView.image = [UIImage imageNamed:[NSString stringWithFormat:@"cspt%d.jpg", ((arc4random() % 2))]];
 }
 @end

@@ -16,13 +16,13 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self.svBtn setHidden:YES];
+    [self.cancelBtn setHidden:YES];
+    [self.imgPkd setHidden:YES];
     
     self.shirtView.image = [UIImage imageNamed:[NSString stringWithFormat:@"cssh%d.jpg", ((arc4random() % 2))]];
     
     self.pntsView.image = [UIImage imageNamed:[NSString stringWithFormat:@"cspt%d.jpg", ((arc4random() % 2))]];
-    
-    
-    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -48,4 +48,22 @@
     [self dismissViewControllerAnimated:NO completion:nil];
 }
 
+- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
+{
+    UIImage *imgSlct = [info valueForKey:UIImagePickerControllerOriginalImage];
+    [self.imgPkd setHidden:NO];
+    [self.svBtn setHidden:NO];
+    [self.cancelBtn setHidden:NO];
+    self.navigationItem.leftBarButtonItem.enabled = NO;
+    self.navigationItem.rightBarButtonItem.enabled = NO;
+    self.imgPkd.image = imgSlct;
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+- (IBAction)cancelPicker:(id)sender {
+    [self.svBtn setHidden:YES];
+    [self.cancelBtn setHidden:YES];
+    [self.imgPkd setHidden:YES];
+
+}
 @end

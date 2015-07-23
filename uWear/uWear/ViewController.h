@@ -14,6 +14,10 @@
 @property (weak, nonatomic) IBOutlet UIButton *refresh;
 - (IBAction)rfrsh:(id)sender;
 - (IBAction)imagePicker:(id)sender;
+@property (weak, nonatomic) IBOutlet UIImageView *imgPkd;
+@property (weak, nonatomic) IBOutlet UIButton *svBtn;
+@property (weak, nonatomic) IBOutlet UIButton *cancelBtn;
+- (IBAction)cancelPicker:(id)sender;
 
 
 @end

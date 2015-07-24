@@ -23,6 +23,7 @@
 		18BAB8951B6283510005693A /* ico.png in Resources */ = {isa = PBXBuildFile; fileRef = 18BAB8941B6283510005693A /* ico.png */; };
 		18BAB8991B62847C0005693A /* bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 18BAB8981B62847C0005693A /* bg.png */; };
 		18BAB89B1B6290BC0005693A /* refreshIco.png in Resources */ = {isa = PBXBuildFile; fileRef = 18BAB89A1B6290BC0005693A /* refreshIco.png */; };
+		18BAB89F1B629BE00005693A /* gal_low.png in Resources */ = {isa = PBXBuildFile; fileRef = 18BAB89E1B629BE00005693A /* gal_low.png */; };
 		18FB796A1B624F1D00AD33E5 /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18FB79691B624F1D00AD33E5 /* NotificationCenter.framework */; };
 		18FB79701B624F1D00AD33E5 /* TodayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18FB796F1B624F1D00AD33E5 /* TodayViewController.m */; };
 		18FB79721B624F1D00AD33E5 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18FB79711B624F1D00AD33E5 /* MainInterface.storyboard */; };
@@ -96,6 +97,7 @@
 		18BAB8941B6283510005693A /* ico.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ico.png; sourceTree = "<group>"; };
 		18BAB8981B62847C0005693A /* bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg.png; sourceTree = "<group>"; };
 		18BAB89A1B6290BC0005693A /* refreshIco.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = refreshIco.png; sourceTree = "<group>"; };
+		18BAB89E1B629BE00005693A /* gal_low.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gal_low.png; sourceTree = "<group>"; };
 		18FB79671B624F1D00AD33E5 /* Today's Pick.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Today's Pick.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		18FB79691B624F1D00AD33E5 /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
 		18FB796D1B624F1D00AD33E5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -157,6 +159,7 @@
 		180A91691B5FB3E900E60B3A /* uWear */ = {
 			isa = PBXGroup;
 			children = (
+				18BAB89E1B629BE00005693A /* gal_low.png */,
 				18BAB89A1B6290BC0005693A /* refreshIco.png */,
 				18BAB8981B62847C0005693A /* bg.png */,
 				18BAB8941B6283510005693A /* ico.png */,
@@ -337,6 +340,7 @@
 			files = (
 				18BAB8991B62847C0005693A /* bg.png in Resources */,
 				180A91761B5FB3E900E60B3A /* Main.storyboard in Resources */,
+				18BAB89F1B629BE00005693A /* gal_low.png in Resources */,
 				18BAB8951B6283510005693A /* ico.png in Resources */,
 				180A917B1B5FB3EA00E60B3A /* LaunchScreen.xib in Resources */,
 				180A91781B5FB3EA00E60B3A /* Images.xcassets in Resources */,

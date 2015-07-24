@@ -77,7 +77,7 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="bSP-DB-r89">
-                                <rect key="frame" x="260" y="467" width="44" height="44"/>
+                                <rect key="frame" x="259.99999991330236" y="467" width="44" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMinY="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <state key="normal" image="refreshIco.png">
@@ -186,7 +186,7 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <navigationItem key="navigationItem" title="Today's Picks" id="e7W-2Z-XaB">
-                        <barButtonItem key="leftBarButtonItem" style="plain" systemItem="compose" id="GEP-VC-Agg">
+                        <barButtonItem key="leftBarButtonItem" style="plain" systemItem="organize" id="GEP-VC-Agg">
                             <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
                                 <segue destination="nbR-np-mZa" kind="modal" id="ovO-qp-Hz8"/>

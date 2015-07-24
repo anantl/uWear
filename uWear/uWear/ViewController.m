@@ -54,6 +54,14 @@
     [self presentViewController:imgpkr animated:NO completion:nil];
 }
 
+- (void) viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    self.shirtView.image=nil;
+    self.pntsView.image=nil;
+    [self fetchRandom:self];
+}
+
 - (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker
 {
     [self dismissViewControllerAnimated:NO completion:nil];
@@ -105,6 +113,9 @@
     }
     self.navigationItem.leftBarButtonItem.enabled = YES;
     self.navigationItem.rightBarButtonItem.enabled = YES;
+    self.shirtView.image=nil;
+    self.pntsView.image=nil;
+    [self fetchRandom:self];
     
 }
 

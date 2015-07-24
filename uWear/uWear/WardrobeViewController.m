@@ -1,29 +1,31 @@
 //
-//  WardrobeCollectionViewController.m
+//  WardrobeViewController.m
 //  uWear
 //
 //  Created by Ananth L on 24/07/15.
 //  Copyright (c) 2015 Ananth L. All rights reserved.
 //
 
-#import "WardrobeCollectionViewController.h"
+#import "WardrobeViewController.h"
+#import "AppDelegate.h"
+#import "EditViewController.h"
 
-@interface WardrobeCollectionViewController ()
+@interface WardrobeViewController ()
 
 @end
 
-@implementation WardrobeCollectionViewController
+@implementation WardrobeViewController
 
+static NSString * const reuseIdentifier = @"Cell";
 
 @synthesize managedObjectContext = _managedObjectContext;
 @synthesize managedObjectModel = _managedObjectModel;
 @synthesize persistentStoreCoordinator = _persistentStoreCoordinator;
 
-static NSString * const reuseIdentifier = @"Cell";
-
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication]delegate];
+    self.managedObjectContext = [appDelegate managedObjectContext];
     NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
     
     NSEntityDescription *entity = [NSEntityDescription entityForName:@"Clothes" inManagedObjectContext:self.managedObjectContext];
@@ -32,23 +34,47 @@ static NSString * const reuseIdentifier = @"Cell";
     NSError *error = nil;
     self.result = [self.managedObjectContext executeFetchRequest:fetchRequest error:&error];
     
-    if (error) {
+    if (error)
+    {
         NSLog(@"Unable to execute fetch request.");
         NSLog(@"%@, %@", error, error.localizedDescription);
-        
     }
-    else {
+    else
+    {
+        NSLog(@"%lu",self.result.count);
+        [self.collectionView reloadData];
         return;
     }
     
-
+    //self.clearsSelectionOnViewWillAppear = NO;
     
-    // self.clearsSelectionOnViewWillAppear = NO;
-    
-    // Register cell classes
     [self.collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:reuseIdentifier];
     
-    // Do any additional setup after loading the view.
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
+    
+    NSEntityDescription *entity = [NSEntityDescription entityForName:@"Clothes" inManagedObjectContext:self.managedObjectContext];
+    [fetchRequest setEntity:entity];
+    
+    NSError *error = nil;
+    self.result = [self.managedObjectContext executeFetchRequest:fetchRequest error:&error];
+    
+    if (error)
+    {
+        NSLog(@"Unable to execute fetch request.");
+        NSLog(@"%@, %@", error, error.localizedDescription);
+    }
+    else
+    {
+        NSLog(@"%lu",self.result.count);
+        [self.collectionView reloadData];
+        return;
+    }
+
 }
 
 - (void)didReceiveMemoryWarning {
@@ -74,22 +100,19 @@ static NSString * const reuseIdentifier = @"Cell";
 
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-
     return [self.result count];
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     static NSString *identifier = @"Cell";
-    
     UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:identifier forIndexPath:indexPath];
     UIImage *newImage;
     NSManagedObject *newObj = (NSManagedObject *)[self.result objectAtIndex:indexPath.row];
     newImage = [UIImage imageWithData:[newObj valueForKey:@"pic"]];
-    UIImageView *wardrobeImageView = (UIImageView *)[cell viewWithTag:100];
-    wardrobeImageView.image = newImage;
+    UIImageView *newImageView = (UIImageView *)[cell viewWithTag:100];
+    newImageView.image = newImage;
     return cell;
 }
-
 #pragma mark <UICollectionViewDelegate>
 
 /*
@@ -120,5 +143,36 @@ static NSString * const reuseIdentifier = @"Cell";
 	
 }
 */
+
+- (IBAction)doneEditing:(id)sender {
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+        if ([segue.identifier isEqualToString:@"bigImg"]) {
+        NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
+        
+        NSEntityDescription *entity = [NSEntityDescription entityForName:@"Clothes" inManagedObjectContext:self.managedObjectContext];
+        [fetchRequest setEntity:entity];
+        
+        NSError *error = nil;
+        self.result = [self.managedObjectContext executeFetchRequest:fetchRequest error:&error];
+        
+        if (error)
+        {
+            NSLog(@"Unable to execute fetch request.");
+            NSLog(@"%@, %@", error, error.localizedDescription);
+        }
+       
+
+            NSArray *indexPaths = [self.collectionView indexPathsForSelectedItems];
+            EditViewController *destViewController = [segue destinationViewController];
+            NSIndexPath *indexPath = [indexPaths objectAtIndex:0];
+            destViewController.resObj = (NSManagedObject *)[self.result objectAtIndex:indexPath.row];
+            [self.collectionView deselectItemAtIndexPath:indexPath animated:NO];
+    }
+    
+}
+
 
 @end

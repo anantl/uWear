@@ -14,11 +14,12 @@
 		180A91781B5FB3EA00E60B3A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 180A91771B5FB3EA00E60B3A /* Images.xcassets */; };
 		180A917B1B5FB3EA00E60B3A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 180A91791B5FB3EA00E60B3A /* LaunchScreen.xib */; };
 		180A91871B5FB3EA00E60B3A /* uWearTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 180A91861B5FB3EA00E60B3A /* uWearTests.m */; };
-		1831608C1B61C49700BFFA68 /* WardrobeCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1831608B1B61C49700BFFA68 /* WardrobeCollectionViewController.m */; };
 		1866BF291B60AC000038F57A /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1866BF281B60AC000038F57A /* CoreData.framework */; };
 		1866BF2A1B60AC140038F57A /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1866BF281B60AC000038F57A /* CoreData.framework */; };
 		1866BF2B1B60AC140038F57A /* CoreData.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1866BF281B60AC000038F57A /* CoreData.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		1866BF301B60AF240038F57A /* uWear-Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1866BF2E1B60AF240038F57A /* uWear-Model.xcdatamodeld */; };
+		1895D7891B62240400E44002 /* WardrobeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1895D7881B62240400E44002 /* WardrobeViewController.m */; };
+		1895D78C1B622FB600E44002 /* EditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1895D78B1B622FB600E44002 /* EditViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,11 +60,13 @@
 		180A91801B5FB3EA00E60B3A /* uWearTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = uWearTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		180A91851B5FB3EA00E60B3A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		180A91861B5FB3EA00E60B3A /* uWearTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = uWearTests.m; sourceTree = "<group>"; };
-		1831608A1B61C49700BFFA68 /* WardrobeCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WardrobeCollectionViewController.h; sourceTree = "<group>"; };
-		1831608B1B61C49700BFFA68 /* WardrobeCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WardrobeCollectionViewController.m; sourceTree = "<group>"; };
 		1866BF281B60AC000038F57A /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		1866BF2D1B60ADE60038F57A /* uWear-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "uWear-Prefix.pch"; sourceTree = "<group>"; };
 		1866BF2F1B60AF240038F57A /* uWear-Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "uWear-Model.xcdatamodel"; sourceTree = "<group>"; };
+		1895D7871B62240400E44002 /* WardrobeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WardrobeViewController.h; sourceTree = "<group>"; };
+		1895D7881B62240400E44002 /* WardrobeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WardrobeViewController.m; sourceTree = "<group>"; };
+		1895D78A1B622FB600E44002 /* EditViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditViewController.h; sourceTree = "<group>"; };
+		1895D78B1B622FB600E44002 /* EditViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,8 +115,10 @@
 				180A916F1B5FB3E900E60B3A /* AppDelegate.m */,
 				180A91711B5FB3E900E60B3A /* ViewController.h */,
 				180A91721B5FB3E900E60B3A /* ViewController.m */,
-				1831608A1B61C49700BFFA68 /* WardrobeCollectionViewController.h */,
-				1831608B1B61C49700BFFA68 /* WardrobeCollectionViewController.m */,
+				1895D7871B62240400E44002 /* WardrobeViewController.h */,
+				1895D7881B62240400E44002 /* WardrobeViewController.m */,
+				1895D78A1B622FB600E44002 /* EditViewController.h */,
+				1895D78B1B622FB600E44002 /* EditViewController.m */,
 				180A91741B5FB3E900E60B3A /* Main.storyboard */,
 				180A91771B5FB3EA00E60B3A /* Images.xcassets */,
 				180A91791B5FB3EA00E60B3A /* LaunchScreen.xib */,
@@ -252,9 +257,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				180A91731B5FB3E900E60B3A /* ViewController.m in Sources */,
-				1831608C1B61C49700BFFA68 /* WardrobeCollectionViewController.m in Sources */,
+				1895D7891B62240400E44002 /* WardrobeViewController.m in Sources */,
 				180A91701B5FB3E900E60B3A /* AppDelegate.m in Sources */,
 				1866BF301B60AF240038F57A /* uWear-Model.xcdatamodeld in Sources */,
+				1895D78C1B622FB600E44002 /* EditViewController.m in Sources */,
 				180A916D1B5FB3E900E60B3A /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

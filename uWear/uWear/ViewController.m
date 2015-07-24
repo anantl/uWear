@@ -8,7 +8,6 @@
 
 #import "ViewController.h"
 #import "AppDelegate.h"
-#import "WardrobeCollectionViewController.h"
 
 @interface ViewController ()
 
@@ -43,6 +42,8 @@
 }
 
 - (IBAction)rfrsh:(id)sender {
+    self.shirtView.image=nil;
+    self.pntsView.image=nil;
     [self fetchRandom:self];
 }
 
@@ -237,14 +238,5 @@
     [self fetchRandom:self];
 }
 
-
-
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    if ([[segue identifier] isEqualToString:@"toCollection"]) {
-        
-        [[segue destinationViewController] setManagedObjectContext:self.managedObjectContext];
-        }
-}
 
 @end

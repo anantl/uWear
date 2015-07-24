@@ -20,6 +20,14 @@
 		1866BF301B60AF240038F57A /* uWear-Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1866BF2E1B60AF240038F57A /* uWear-Model.xcdatamodeld */; };
 		1895D7891B62240400E44002 /* WardrobeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1895D7881B62240400E44002 /* WardrobeViewController.m */; };
 		1895D78C1B622FB600E44002 /* EditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1895D78B1B622FB600E44002 /* EditViewController.m */; };
+		18BAB8951B6283510005693A /* ico.png in Resources */ = {isa = PBXBuildFile; fileRef = 18BAB8941B6283510005693A /* ico.png */; };
+		18BAB8991B62847C0005693A /* bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 18BAB8981B62847C0005693A /* bg.png */; };
+		18BAB89B1B6290BC0005693A /* refreshIco.png in Resources */ = {isa = PBXBuildFile; fileRef = 18BAB89A1B6290BC0005693A /* refreshIco.png */; };
+		18FB796A1B624F1D00AD33E5 /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18FB79691B624F1D00AD33E5 /* NotificationCenter.framework */; };
+		18FB79701B624F1D00AD33E5 /* TodayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18FB796F1B624F1D00AD33E5 /* TodayViewController.m */; };
+		18FB79721B624F1D00AD33E5 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18FB79711B624F1D00AD33E5 /* MainInterface.storyboard */; };
+		18FB79751B624F1D00AD33E5 /* Today's Pick.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 18FB79671B624F1D00AD33E5 /* Today's Pick.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		18FB797A1B625DD900AD33E5 /* uWear-Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1866BF2E1B60AF240038F57A /* uWear-Model.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +37,13 @@
 			proxyType = 1;
 			remoteGlobalIDString = 180A91661B5FB3E900E60B3A;
 			remoteInfo = uWear;
+		};
+		18FB79731B624F1D00AD33E5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 180A915F1B5FB3E900E60B3A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 18FB79661B624F1D00AD33E5;
+			remoteInfo = "Today's Pick";
 		};
 /* End PBXContainerItemProxy section */
 
@@ -42,6 +57,17 @@
 				1866BF2B1B60AC140038F57A /* CoreData.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		18FB79791B624F1D00AD33E5 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				18FB79751B624F1D00AD33E5 /* Today's Pick.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
@@ -67,6 +93,15 @@
 		1895D7881B62240400E44002 /* WardrobeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WardrobeViewController.m; sourceTree = "<group>"; };
 		1895D78A1B622FB600E44002 /* EditViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditViewController.h; sourceTree = "<group>"; };
 		1895D78B1B622FB600E44002 /* EditViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditViewController.m; sourceTree = "<group>"; };
+		18BAB8941B6283510005693A /* ico.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ico.png; sourceTree = "<group>"; };
+		18BAB8981B62847C0005693A /* bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg.png; sourceTree = "<group>"; };
+		18BAB89A1B6290BC0005693A /* refreshIco.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = refreshIco.png; sourceTree = "<group>"; };
+		18FB79671B624F1D00AD33E5 /* Today's Pick.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Today's Pick.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		18FB79691B624F1D00AD33E5 /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
+		18FB796D1B624F1D00AD33E5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		18FB796E1B624F1D00AD33E5 /* TodayViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TodayViewController.h; sourceTree = "<group>"; };
+		18FB796F1B624F1D00AD33E5 /* TodayViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TodayViewController.m; sourceTree = "<group>"; };
+		18FB79711B624F1D00AD33E5 /* MainInterface.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainInterface.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +121,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		18FB79641B624F1D00AD33E5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				18FB796A1B624F1D00AD33E5 /* NotificationCenter.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -95,6 +138,8 @@
 				1866BF281B60AC000038F57A /* CoreData.framework */,
 				180A91691B5FB3E900E60B3A /* uWear */,
 				180A91831B5FB3EA00E60B3A /* uWearTests */,
+				18FB796B1B624F1D00AD33E5 /* Today's Pick */,
+				18FB79681B624F1D00AD33E5 /* Frameworks */,
 				180A91681B5FB3E900E60B3A /* Products */,
 			);
 			sourceTree = "<group>";
@@ -104,6 +149,7 @@
 			children = (
 				180A91671B5FB3E900E60B3A /* uWear.app */,
 				180A91801B5FB3EA00E60B3A /* uWearTests.xctest */,
+				18FB79671B624F1D00AD33E5 /* Today's Pick.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -111,6 +157,9 @@
 		180A91691B5FB3E900E60B3A /* uWear */ = {
 			isa = PBXGroup;
 			children = (
+				18BAB89A1B6290BC0005693A /* refreshIco.png */,
+				18BAB8981B62847C0005693A /* bg.png */,
+				18BAB8941B6283510005693A /* ico.png */,
 				180A916E1B5FB3E900E60B3A /* AppDelegate.h */,
 				180A916F1B5FB3E900E60B3A /* AppDelegate.m */,
 				180A91711B5FB3E900E60B3A /* ViewController.h */,
@@ -155,6 +204,33 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		18FB79681B624F1D00AD33E5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				18FB79691B624F1D00AD33E5 /* NotificationCenter.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		18FB796B1B624F1D00AD33E5 /* Today's Pick */ = {
+			isa = PBXGroup;
+			children = (
+				18FB796E1B624F1D00AD33E5 /* TodayViewController.h */,
+				18FB796F1B624F1D00AD33E5 /* TodayViewController.m */,
+				18FB79711B624F1D00AD33E5 /* MainInterface.storyboard */,
+				18FB796C1B624F1D00AD33E5 /* Supporting Files */,
+			);
+			path = "Today's Pick";
+			sourceTree = "<group>";
+		};
+		18FB796C1B624F1D00AD33E5 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				18FB796D1B624F1D00AD33E5 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -166,10 +242,12 @@
 				180A91641B5FB3E900E60B3A /* Frameworks */,
 				180A91651B5FB3E900E60B3A /* Resources */,
 				1866BF2C1B60AC140038F57A /* Embed Frameworks */,
+				18FB79791B624F1D00AD33E5 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				18FB79741B624F1D00AD33E5 /* PBXTargetDependency */,
 			);
 			name = uWear;
 			productName = uWear;
@@ -194,6 +272,23 @@
 			productReference = 180A91801B5FB3EA00E60B3A /* uWearTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		18FB79661B624F1D00AD33E5 /* Today's Pick */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 18FB79781B624F1D00AD33E5 /* Build configuration list for PBXNativeTarget "Today's Pick" */;
+			buildPhases = (
+				18FB79631B624F1D00AD33E5 /* Sources */,
+				18FB79641B624F1D00AD33E5 /* Frameworks */,
+				18FB79651B624F1D00AD33E5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Today's Pick";
+			productName = "Today's Pick";
+			productReference = 18FB79671B624F1D00AD33E5 /* Today's Pick.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -209,6 +304,9 @@
 					180A917F1B5FB3EA00E60B3A = {
 						CreatedOnToolsVersion = 6.1.1;
 						TestTargetID = 180A91661B5FB3E900E60B3A;
+					};
+					18FB79661B624F1D00AD33E5 = {
+						CreatedOnToolsVersion = 6.1.1;
 					};
 				};
 			};
@@ -227,6 +325,7 @@
 			targets = (
 				180A91661B5FB3E900E60B3A /* uWear */,
 				180A917F1B5FB3EA00E60B3A /* uWearTests */,
+				18FB79661B624F1D00AD33E5 /* Today's Pick */,
 			);
 		};
 /* End PBXProject section */
@@ -236,9 +335,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18BAB8991B62847C0005693A /* bg.png in Resources */,
 				180A91761B5FB3E900E60B3A /* Main.storyboard in Resources */,
+				18BAB8951B6283510005693A /* ico.png in Resources */,
 				180A917B1B5FB3EA00E60B3A /* LaunchScreen.xib in Resources */,
 				180A91781B5FB3EA00E60B3A /* Images.xcassets in Resources */,
+				18BAB89B1B6290BC0005693A /* refreshIco.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -246,6 +348,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		18FB79651B624F1D00AD33E5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				18FB79721B624F1D00AD33E5 /* MainInterface.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -273,6 +383,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		18FB79631B624F1D00AD33E5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				18FB797A1B625DD900AD33E5 /* uWear-Model.xcdatamodeld in Sources */,
+				18FB79701B624F1D00AD33E5 /* TodayViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -280,6 +399,11 @@
 			isa = PBXTargetDependency;
 			target = 180A91661B5FB3E900E60B3A /* uWear */;
 			targetProxy = 180A91811B5FB3EA00E60B3A /* PBXContainerItemProxy */;
+		};
+		18FB79741B624F1D00AD33E5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 18FB79661B624F1D00AD33E5 /* Today's Pick */;
+			targetProxy = 18FB79731B624F1D00AD33E5 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -435,6 +559,30 @@
 			};
 			name = Release;
 		};
+		18FB79761B624F1D00AD33E5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Today's Pick/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		18FB79771B624F1D00AD33E5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "Today's Pick/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -461,6 +609,15 @@
 			buildConfigurations = (
 				180A918E1B5FB3EA00E60B3A /* Debug */,
 				180A918F1B5FB3EA00E60B3A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		18FB79781B624F1D00AD33E5 /* Build configuration list for PBXNativeTarget "Today's Pick" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				18FB79761B624F1D00AD33E5 /* Debug */,
+				18FB79771B624F1D00AD33E5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>Today's Pick.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
 		<key>uWear.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -18,6 +23,11 @@
 			<true/>
 		</dict>
 		<key>180A917F1B5FB3EA00E60B3A</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>18FB79661B624F1D00AD33E5</key>
 		<dict>
 			<key>primary</key>
 			<true/>

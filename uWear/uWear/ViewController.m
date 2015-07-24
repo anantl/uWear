@@ -105,6 +105,38 @@
         NSLog(@"Unable to save managed object context.");
         NSLog(@"%@, %@", error, error.localizedDescription);
     }
+    
+    //image upload start
+    /*
+    NSMutableDictionary *upImg = [[NSMutableDictionary alloc] init];
+    upImg[@"img"]=imageData;
+    upImg[@"cat"]=self.saveCat;
+    upImg[@"type"]=self.saveType;
+    NSData *addJSON = [NSJSONSerialization dataWithJSONObject:upImg options:0 error:NULL];
+    
+    NSMutableURLRequest *req1 = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:@"http://cftestapp.net84.net/add_image.php"]];
+    [req1 setHTTPMethod:@"POST"];
+    [req1 setHTTPBody:addJSON];
+    NSURLResponse *response1 = nil;
+    NSError *err1;
+    NSData *data1 = [NSURLConnection sendSynchronousRequest:req1 returningResponse:&response1 error:&err1];
+    if(err1)
+    {
+        NSLog(@"Error in connection %@",err1);
+    }
+    else
+    {
+        NSMutableDictionary *resultsUpdate = [NSJSONSerialization JSONObjectWithData:data1 options:0 error:&err1];
+        if(err1)
+            NSLog(@"Error in response %@",err1);
+        else
+        {
+            NSLog(@"%@",resultsUpdate);
+        }
+    }
+     */
+    //image upload finish
+    
     [self.svBtn setHidden:YES];
     [self.cancelBtn setHidden:YES];
     [self.imgPkd setHidden:YES];

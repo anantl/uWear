@@ -8,12 +8,17 @@
 
 #import "ViewController.h"
 #import "AppDelegate.h"
+#import "WardrobeCollectionViewController.h"
 
 @interface ViewController ()
 
 @end
 
 @implementation ViewController
+
+@synthesize managedObjectContext = _managedObjectContext;
+@synthesize managedObjectModel = _managedObjectModel;
+@synthesize persistentStoreCoordinator = _persistentStoreCoordinator;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -207,6 +212,8 @@
     self.casMainBtn.alpha = .6;
     self.offMainBtn.alpha = 1;
     self.srchType = @"office";
+    self.shirtView.image=nil;
+    self.pntsView.image=nil;
     [self fetchRandom:self];
 }
 
@@ -215,6 +222,8 @@
     self.casMainBtn.alpha = .6;
     self.parMainBtn.alpha = 1;
     self.srchType = @"party";
+    self.shirtView.image=nil;
+    self.pntsView.image=nil;
     [self fetchRandom:self];
 }
 
@@ -223,8 +232,19 @@
     self.offMainBtn.alpha = .6;
     self.casMainBtn.alpha = 1;
     self.srchType = @"casual";
+    self.shirtView.image=nil;
+    self.pntsView.image=nil;
     [self fetchRandom:self];
 }
 
+
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([[segue identifier] isEqualToString:@"toCollection"]) {
+        
+        [[segue destinationViewController] setManagedObjectContext:self.managedObjectContext];
+        }
+}
 
 @end

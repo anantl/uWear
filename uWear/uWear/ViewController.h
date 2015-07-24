@@ -16,9 +16,9 @@
 @property (weak, nonatomic) IBOutlet UIImageView *imgPkd;
 @property (weak, nonatomic) IBOutlet UIButton *svBtn;
 @property (weak, nonatomic) IBOutlet UIButton *cancelBtn;
-@property (strong, nonatomic) NSManagedObjectContext *managedObjectContext;
-@property (strong, nonatomic) NSManagedObjectModel *managedObjectModel;
-@property (strong, nonatomic) NSPersistentStoreCoordinator *persistentStoreCoordinator;
+@property (strong, nonatomic, retain) NSManagedObjectContext *managedObjectContext;
+@property (strong, nonatomic, retain) NSManagedObjectModel *managedObjectModel;
+@property (strong, nonatomic, retain) NSPersistentStoreCoordinator *persistentStoreCoordinator;
 @property (weak, nonatomic) NSString *srchType;
 @property (weak, nonatomic) NSString *saveType;
 @property (weak, nonatomic) NSString *saveCat;

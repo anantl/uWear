@@ -107,14 +107,15 @@
     }
     
     //image upload start
-    /*
+
     NSMutableDictionary *upImg = [[NSMutableDictionary alloc] init];
-    upImg[@"img"]=imageData;
+    NSString * imageString = [imageData base64EncodedStringWithOptions:NSDataBase64Encoding64CharacterLineLength];
+    upImg[@"img"]=imageString;
     upImg[@"cat"]=self.saveCat;
     upImg[@"type"]=self.saveType;
     NSData *addJSON = [NSJSONSerialization dataWithJSONObject:upImg options:0 error:NULL];
     
-    NSMutableURLRequest *req1 = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:@"http://cftestapp.net84.net/add_image.php"]];
+    NSMutableURLRequest *req1 = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:@"http://internmbcet.host56.com/add_image.php"]];
     [req1 setHTTPMethod:@"POST"];
     [req1 setHTTPBody:addJSON];
     NSURLResponse *response1 = nil;
@@ -134,7 +135,7 @@
             NSLog(@"%@",resultsUpdate);
         }
     }
-     */
+
     //image upload finish
     
     [self.svBtn setHidden:YES];

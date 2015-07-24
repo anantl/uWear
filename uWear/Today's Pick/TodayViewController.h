@@ -9,9 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface TodayViewController : UIViewController
-@property (readonly, strong, nonatomic) NSManagedObjectContext *managedObjectContext;
-@property (readonly, strong, nonatomic) NSManagedObjectModel *managedObjectModel;
-@property (readonly, strong, nonatomic) NSPersistentStoreCoordinator *persistentStoreCoordinator;
+
 @property (weak, nonatomic) IBOutlet UIImageView *top;
 @property (weak, nonatomic) IBOutlet UIImageView *bottom;
 - (IBAction)rfrsh:(id)sender;

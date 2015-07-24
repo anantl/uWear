@@ -96,7 +96,7 @@
 		1895D78B1B622FB600E44002 /* EditViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditViewController.m; sourceTree = "<group>"; };
 		18BAB8941B6283510005693A /* ico.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ico.png; sourceTree = "<group>"; };
 		18BAB8981B62847C0005693A /* bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg.png; sourceTree = "<group>"; };
-		18BAB89A1B6290BC0005693A /* refreshIco.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = refreshIco.png; sourceTree = "<group>"; };
+		18BAB89A1B6290BC0005693A /* refreshIco.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = refreshIco.png; path = ../uWear/refreshIco.png; sourceTree = "<group>"; };
 		18BAB89E1B629BE00005693A /* gal_low.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gal_low.png; sourceTree = "<group>"; };
 		18FB79671B624F1D00AD33E5 /* Today's Pick.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Today's Pick.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		18FB79691B624F1D00AD33E5 /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
@@ -160,7 +160,6 @@
 			isa = PBXGroup;
 			children = (
 				18BAB89E1B629BE00005693A /* gal_low.png */,
-				18BAB89A1B6290BC0005693A /* refreshIco.png */,
 				18BAB8981B62847C0005693A /* bg.png */,
 				18BAB8941B6283510005693A /* ico.png */,
 				180A916E1B5FB3E900E60B3A /* AppDelegate.h */,
@@ -218,6 +217,7 @@
 		18FB796B1B624F1D00AD33E5 /* Today's Pick */ = {
 			isa = PBXGroup;
 			children = (
+				18BAB89A1B6290BC0005693A /* refreshIco.png */,
 				18FB796E1B624F1D00AD33E5 /* TodayViewController.h */,
 				18FB796F1B624F1D00AD33E5 /* TodayViewController.m */,
 				18FB79711B624F1D00AD33E5 /* MainInterface.storyboard */,

@@ -7,7 +7,6 @@
 //
 
 #import "TodayViewController.h"
-#import "AppDelegate.h"
 #import <NotificationCenter/NotificationCenter.h>
 
 @interface TodayViewController () <NCWidgetProviding>
@@ -15,15 +14,57 @@
 @end
 
 @implementation TodayViewController
-
-@synthesize managedObjectContext = _managedObjectContext;
-@synthesize managedObjectModel = _managedObjectModel;
-@synthesize persistentStoreCoordinator = _persistentStoreCoordinator;
-
 - (void)viewDidLoad {
     [super viewDidLoad];
-   
-    // Do any additional setup after loading the view from its nib.
+    NSMutableURLRequest *req1 = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:@"http://internmbcet.host56.com/fetch_image.php"]];
+    
+    NSURLResponse *response1 = nil;
+    NSError *err1;
+    NSData *data1 = [NSURLConnection sendSynchronousRequest:req1 returningResponse:&response1 error:&err1];
+    if(err1)
+    {
+        NSLog(@"Error in connection %@",err1);
+    }
+    else
+    {
+        NSArray *testArray = [NSJSONSerialization JSONObjectWithData:data1 options:NSJSONReadingAllowFragments error:&err1];
+        NSDictionary *resultsUpdate = testArray[rand()%[testArray count]];
+        if(err1)
+            NSLog(@"Error in response %@",err1);
+        else
+        {
+            NSData *data = [[NSData alloc]initWithBase64EncodedString:[resultsUpdate valueForKey:@"img"] options:NSDataBase64DecodingIgnoreUnknownCharacters];
+            
+            UIImage *image = [UIImage imageWithData:data];
+            self.top.image=image;
+        }
+    }
+    
+    req1 = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:@"http://internmbcet.host56.com/fetch_image2.php"]];
+    err1=nil;
+    response1 = nil;
+    data1 = [NSURLConnection sendSynchronousRequest:req1 returningResponse:&response1 error:&err1];
+    if(err1)
+    {
+        NSLog(@"Error in connection %@",err1);
+    }
+    else
+    {
+        NSArray *testArray = [NSJSONSerialization JSONObjectWithData:data1 options:NSJSONReadingAllowFragments error:&err1];
+        NSDictionary *resultsUpdate = testArray[rand()%[testArray count]];
+        if(err1)
+            NSLog(@"Error in response %@",err1);
+        else
+        {
+            NSData *data = [[NSData alloc]initWithBase64EncodedString:[resultsUpdate valueForKey:@"img"] options:NSDataBase64DecodingIgnoreUnknownCharacters];
+            
+            UIImage *image = [UIImage imageWithData:data];
+            self.top.image=image;
+        }
+    }
+    
+    
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -42,5 +83,6 @@
 }
 
 - (IBAction)rfrsh:(id)sender {
+    [self viewDidLoad];
 }
 @end

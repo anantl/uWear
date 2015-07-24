@@ -14,20 +14,24 @@ Developed in Xcode 6 using Objective C.
 ##Screenshots
 
 ![](Screenshots/Main_Screen.png)
+
 **Main Screen**
 
 ---
 ![](Screenshots/Add_Item_Screen.png)
+
 **Add Item Screen**
 
 
 ---
 ![](Screenshots/Edit_Screen.png)
+
 **Edit Screen**
 
 
 ---
 ![](Screenshots/Collection_Screen.png)
+
 **Collection Screen**
 
 
